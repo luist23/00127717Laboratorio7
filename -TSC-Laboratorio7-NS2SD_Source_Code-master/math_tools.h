@@ -149,3 +149,12 @@ void inverseMatrix(Matrix M, Matrix &Minv){
     cout << "Calculo de inversa...\n";
     productRealMatrix(1/det,Adj,Minv);
 }
+
+Matrix negativoNot(Matrix A) {
+  Matrix R;
+  int n = A.size(), m = A.at(0).size();
+  zeroes(R, n, m);
+  for (int i = 0; i < n; i++)
+    for (int j = 0; j < m; j++) R.at(i).at(j) = -1 * A.at(i).at(j);
+return R;
+}
